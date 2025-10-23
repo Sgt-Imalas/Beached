@@ -1,6 +1,4 @@
-﻿using HarmonyLib;
-
-namespace Beached.Content.Scripts.Entities.Comets
+﻿namespace Beached.Content.Scripts.Entities.Comets
 {
 	public class Shrapnel : Comet
 	{
@@ -8,28 +6,17 @@ namespace Beached.Content.Scripts.Entities.Comets
 
 		private static AccessTools.FieldRef<Comet, float> explosionMass;
 
-		public override void OnPrefabInit()
-		{
-			base.OnPrefabInit();
-
-			if (explosionMass == null)
-			{
-				var f_explosionMass = AccessTools.Field(typeof(Comet), "explosionMass");
-				explosionMass = AccessTools.FieldRefAccess<Comet, float>(f_explosionMass);
-			}
-		}
-
 		public void SetExplosionMass(float value)
 		{
-			explosionMass(this) = value;
+			explosionMass = value;
 		}
 
 		public override void OnSpawn()
 		{
-			StartLoopingSound();
+			StartLoopingSound2();
 		}
 
-		private void StartLoopingSound()
+		private void StartLoopingSound2()
 		{
 			loopingSounds.StartSound(flyingSound);
 			loopingSounds.UpdateFirstParameter(flyingSound, _FLYING_SOUND_ID_PARAMETER, flyingSoundID);

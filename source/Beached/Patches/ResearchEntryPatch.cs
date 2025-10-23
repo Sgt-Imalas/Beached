@@ -1,4 +1,6 @@
-﻿namespace Beached.Patches
+﻿using HarmonyLib;
+
+namespace Beached.Patches
 {
 	public class ResearchEntryPatch
 	{
@@ -38,4 +40,3 @@
 		}
 	}
 }
-*/

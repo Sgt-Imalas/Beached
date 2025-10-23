@@ -300,10 +300,13 @@ namespace Beached
 
 			Log.Debug("loading UI");
 			Prefabs.universalSidescreen = bundle.LoadAsset<GameObject>("Assets/Beached/UI/UniversalSidescreen_tmpconverted.prefab");
+			Debug.Assert(Prefabs.universalSidescreen != null, "universalSidescreen was null");
 			Prefabs.critterIdentitySidescreen = bundle2.LoadAsset<GameObject>("Assets/UI/CritterIdentityScreen.prefab");
+			Debug.Assert(Prefabs.critterIdentitySidescreen != null, "critterIdentitySidescreen was null");
 			Prefabs.critterIdentitySidescreen.gameObject.SetActive(false);
 			Prefabs.critterIdentitySidescreen.AddOrGet<RectTransform>();
 			Prefabs.muffinSideScreen = bundle2.LoadAsset<GameObject>("Assets/UI/MuffinSideScreen_tmpconverted.prefab");
+			Debug.Assert(Prefabs.muffinSideScreen != null, "muffinSideScreen was null");
 
 			TMPConverter.ReplaceAllText(Prefabs.universalSidescreen);
 			TMPConverter.ReplaceAllText(Prefabs.critterIdentitySidescreen);

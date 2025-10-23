@@ -1,10 +1,12 @@
-﻿namespace Beached.Content.Scripts.Entities.Comets
+﻿using HarmonyLib;
+
+namespace Beached.Content.Scripts.Entities.Comets
 {
 	public class Shrapnel : Comet
 	{
 		private HashedString _FLYING_SOUND_ID_PARAMETER = "meteorType";
 
-		private static AccessTools.FieldRef<Comet, float> explosionMass;
+		//private static AccessTools.FieldRef<Comet, float> explosionMass;
 
 		public void SetExplosionMass(float value)
 		{

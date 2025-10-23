@@ -42,7 +42,7 @@
 		</Reference>
 
 		<Reference Include="FUtility">
-		  <HintPath>$(FUtilityPath)</HintPath>
+		  <HintPath>bin\FUtility.dll</HintPath>
 		</Reference>
 
 		<Reference Include="ImGui">

@@ -4,10 +4,7 @@ namespace Beached.Content.Scripts.Entities.Comets
 {
 	public class Shrapnel : Comet
 	{
-		[MyCmpReq]
-		private LoopingSounds loopingSounds;
-
-		private HashedString FLYING_SOUND_ID_PARAMETER = "meteorType";
+		private HashedString _FLYING_SOUND_ID_PARAMETER = "meteorType";
 
 		private static AccessTools.FieldRef<Comet, float> explosionMass;
 
@@ -35,7 +32,7 @@ namespace Beached.Content.Scripts.Entities.Comets
 		private void StartLoopingSound()
 		{
 			loopingSounds.StartSound(flyingSound);
-			loopingSounds.UpdateFirstParameter(flyingSound, FLYING_SOUND_ID_PARAMETER, flyingSoundID);
+			loopingSounds.UpdateFirstParameter(flyingSound, _FLYING_SOUND_ID_PARAMETER, flyingSoundID);
 		}
 	}
 }

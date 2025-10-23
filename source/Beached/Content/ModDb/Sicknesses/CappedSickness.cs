@@ -9,7 +9,7 @@ namespace Beached.Content.ModDb.Sicknesses
 		public const float IMMUNE_ATTACK_STRENGTH = 0.00025f;
 		public static float duration = 7 * CONSTS.CYCLE_LENGTH;
 
-		public static List<InfectionVector> infectionVectors =
+		public static List<InfectionVector> _infectionVectors =
 		[
 			InfectionVector.Inhalation,
 			InfectionVector.Digestion
@@ -20,7 +20,7 @@ namespace Beached.Content.ModDb.Sicknesses
 			SicknessType.Pathogen,
 			Severity.Minor,
 			IMMUNE_ATTACK_STRENGTH,
-			infectionVectors,
+			_infectionVectors,
 			duration,
 			BEffects.CAPPED_RECOVERY)
 		{

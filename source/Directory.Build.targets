@@ -54,7 +54,7 @@
 
 		<Publicise
 			InputAssemblies="@(PubliciseInputAssemblies)"
-			OutputPath="D:/Modding/OxygenNotIncluded/PublicisedLib"
+			OutputPath="E:\ONIModding\ModsSource\ModsSolution\PublicisedAssembly"
 			PubliciseCompilerGenerated="false" />
 	</Target>
 

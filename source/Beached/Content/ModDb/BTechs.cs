@@ -39,6 +39,7 @@ namespace Beached.Content.ModDb
 
 		internal static void PostInit(Techs techs)
 		{
+			return;
 			var advancedPower = techs.Get(FUtility.CONSTS.TECH.POWER.ADVANCED_POWER_REGULATION);
 			var hydro = techs.Get(HYDRO_ELECTRONICS);
 
